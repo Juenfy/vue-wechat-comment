@@ -26,10 +26,7 @@ How to import
 import WechatComment from 'wechat-comment'
 import 'wechat-comment/dist/wechat-comment.css'
 ```
-
-## API reference
-
-### Initialisation
+How to use
 ```js
 //Extend more emoji.
 const extEmoji = {
@@ -58,6 +55,10 @@ const extEmoji = {
 ```html
 <wechat-comment @sendCb="(msg) => { console.log(msg) }" :emoji="extEmoji"></wechat-comment>
 ```
+
+## API reference
+
+### Initialisation
 
 | Props                                       | Description                                                          |      Default       |
 |---------------------------------------------|----------------------------------------------------------------------|:------------------:|
