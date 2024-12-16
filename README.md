@@ -77,9 +77,9 @@ const extEmoji = {
 | <b>startVoice</b> | Callback when you start voice record.      |                                                                                      |
 | <b>stopVoice</b>  | Callback when you stop voice record.       |                                  `cancel` or `send`                                  |
 
-[npm-img]: https://img.shields.io/npm/v/wechat-comment
-[npm-url]: https://npmjs.org/package/wechat-comment
-[build-size-img]: https://img.shields.io/bundlephobia/minzip/wechat-comment
-[build-size-url]: https://bundlephobia.com/result?p=wechat-comment
-[npm-downloads-img]: https://img.shields.io/npm/dt/wechat-comment
-[npm-downloads-url]: https://www.npmtrends.com/wechat-comment
+[npm-img]: https://img.shields.io/npm/v/vue-wechat-comment
+[npm-url]: https://npmjs.org/package/vue-wechat-comment
+[build-size-img]: https://img.shields.io/bundlephobia/minzip/vue-wechat-comment
+[build-size-url]: https://bundlephobia.com/result?p=vue-wechat-comment
+[npm-downloads-img]: https://img.shields.io/npm/dt/vue-wechat-comment
+[npm-downloads-url]: https://www.npmtrends.com/vue-wechat-comment
