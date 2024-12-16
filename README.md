@@ -27,12 +27,6 @@ import WechatComment from 'wechat-comment'
 import 'wechat-comment/dist/wechat-comment.css'
 ```
 
-then
-
-```html
-<wechat-comment @sendCb="(msg) => { console.log(msg) }" position="bottom" :emoji="extEmoji"></wechat-comment>
-```
-
 ## API reference
 
 ### Initialisation
