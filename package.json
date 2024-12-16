@@ -1,9 +1,9 @@
 {
-  "name": "wechat-comment",
-  "version": "1.0.1",
+  "name": "vue-wechat-comment",
+  "version": "1.0.0",
   "description": "The cover wechat comment for vue3",
-  "main": "dist/wechat-comment.umd.js",
-  "module": "dist/wechat-comment.es.js",
+  "main": "dist/vue-wechat-comment.umd.js",
+  "module": "dist/vue-wechat-comment.es.js",
   "files": [
     "dist",
     "README.md"
