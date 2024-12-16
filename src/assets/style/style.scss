@@ -1,0 +1,268 @@
+$color-f8: #f8f8f8;
+$color-ed: #ededed;
+$color-ff: #ffffff;
+$primary-color: #57be6a;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wechat-comment-container {
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  min-height: 3.5rem;
+  background: $color-f8;
+
+  .top {
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 3.5rem;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .voice, .emoji, .more, .send {
+      width: 1.5rem;
+      height: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0.5rem;
+
+      .icon {
+        width: inherit;
+      }
+    }
+
+    .voice {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+
+    .message {
+      flex: 1;
+      height: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      textarea, button {
+        width: 100%;
+        border: none;
+        outline: none;
+        height: 2.4rem;
+        border-radius: 0.2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: "微软雅黑", serif;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        background: #fff;
+      }
+    }
+  }
+
+  .bottom {
+    height: 0;
+    width: inherit;
+    background: $color-ed;
+    transition: popup-close 0.5s;
+    -webkit-animation: popup-close 0.5s;
+    -moz-animation: popup-close 0.5s;
+
+    .emoji {
+      .tab {
+        height: 3rem;
+        width: inherit;
+        background: $color-f8;
+        overflow-x: scroll;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0;
+
+        .item {
+          width: 2rem;
+          height: 2rem;
+          padding: 0.5rem;
+          margin-left: 0.5rem;
+          border-radius: 0.2rem;
+          overflow: hidden;
+          flex-shrink: 0;
+
+          img {
+            width: inherit;
+            height: inherit;
+          }
+
+          &:hover {
+            background: $color-ff;
+          }
+        }
+
+        .active {
+          background: $color-ff;
+        }
+      }
+
+      .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        overflow-y: scroll;
+        max-height: 16rem;
+        padding: 0.5rem 0;
+        background: $color-ed;
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 80%;
+          }
+
+          span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  .active {
+    animation: popup 0.5s;
+    -webkit-animation: popup 0.5s;
+    -moz-animation: popup 0.5s;
+    height: auto;
+  }
+
+  @keyframes popup {
+    from {
+      height: 0
+    }
+    to {
+      height: auto
+    }
+  }
+  @-webkit-keyframes popup {
+    from {
+      height: 0
+    }
+    to {
+      height: auto
+    }
+  }
+  @-moz-keyframes popup {
+    from {
+      height: 0
+    }
+    to {
+      height: auto
+    }
+  }
+
+  @keyframes popup-close {
+    from {
+      height: auto
+    }
+    to {
+      height: 0
+    }
+  }
+  @-webkit-keyframes popup-close {
+    from {
+      height: auto
+    }
+    to {
+      height: 0
+    }
+  }
+  @-moz-keyframes popup-close {
+    from {
+      height: auto
+    }
+    to {
+      height: 0
+    }
+  }
+}
+
+.position-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.position-top {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.voice-recording {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .bubble {
+    position: relative;
+    background: $primary-color;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .waveform {
+      width: 100px;
+      height: 30px;
+    }
+  }
+
+  .bubble::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $primary-color;
+  }
+
+  .bubble-cancel {
+    background: red;
+  }
+
+  .bubble-cancel::before {
+    border-top: 10px solid red;
+  }
+
+  .recording-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-f8;
+  }
+}

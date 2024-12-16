@@ -1,0 +1,34 @@
+{
+  "name": "wechat-comment",
+  "version": "1.0.0",
+  "description": "The cover wechat comment for vue3",
+  "main": "dist/wechat-comment.umd.js",
+  "module": "dist/wechat-comment.es.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "wechat",
+    "comment"
+  ],
+  "author": "Jeunfy <824314051@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Juenfy/vue-wechat-comment"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "sass-embedded": "^1.82.0",
+    "vite": "^6.0.3"
+  }
+}
