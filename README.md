@@ -17,14 +17,14 @@ Keydown enter or click send button to send text message.
 ## Quick start
 
 ```shell
-npm i wechat-comment
+npm i vue-wechat-comment
 ```
 
 How to import
 
 ```js
-import WechatComment from 'wechat-comment'
-import 'wechat-comment/dist/wechat-comment.css'
+import WechatComment from 'vue-wechat-comment'
+import 'vue-wechat-comment/dist/vue-wechat-comment.css'
 ```
 How to use
 ```js
